@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loop </title>
+</head>
+<body>
+<div id="output"></div>
+<script>
+function processNumbers() {
+// Get user input with prompt
+let input = prompt("Enter a list of numbers separated by commas (e.g., 2, 3, 10, -1, 6):");
+
+if (input) {
+// Split the input string into an array of numbers
+let numbersArray = input.split(',').map(Number);
+
+for (let i = 0; i < numbersArray.length; i++) {
+let num = numbersArray[i];
+
+// If a negative number is found, break the loop after confirmation
+if (num < 0) {
+alert("Negative number encountered, stopping.");
+break;
+}
+
+// Check if the number is divisible by 5 and use `continue`
+if (num % 5 === 0) {
+alert(`Number ${num} is divisible by 5`);
+continue;
+}
+
+// Use `switch` to determine if the number is even or odd
+switch (num % 2) {
+case 0:
+alert(`Number ${num} is Even`);
+break;
+case 1:
+alert(`Number ${num} is Odd`);
+break;
+default:
+alert(`Number ${num} is Unknown`);
+}
+}
+
+// Confirm if the user wants to run the process again
+let runAgain = confirm("Do you want to run the process again?");
+if (runAgain) {
+processNumbers(); // Call the function again if the user confirms
+} else {
+alert("Process ended.");
+}
+} else {
+alert("No input provided. Process ended.");
+}
+}
+
+// Call the function to start the process
+processNumbers();
+</script>
+</body>
+</html>

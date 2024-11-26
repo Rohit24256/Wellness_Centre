@@ -1,0 +1,53 @@
+body{
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    margin: 10px;
+}
+
+h1{
+    font-size: 25px;
+    color: white;
+}
+
+pre{
+    color: white;
+    font-size: 12px;
+}
+
+.navbar{
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+p{
+    color: black;
+    font-size: 12px;
+}
+
+h2{
+    font-size: 15px;
+    color: black;
+}
+
+footer{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 8px;
+    padding: 8px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-weight: 10px;
+}
+
+a{
+    color: black;
+}
+
+main{
+    background-color: white;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+}

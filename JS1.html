@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Switch, Break, and Continue Example</title>
+</head>
+<body>
+<div id="output"></div>
+<script>
+function processNumbers(numbersArray) {
+// Get the output element by ID
+const outputElement = document.getElementById('output');
+outputElement.innerHTML = ""; // Clear any previous output
+
+for (let i = 0; i < numbersArray.length; i++) {
+let num = numbersArray[i];
+
+// If a negative number is found, break the loop
+if (num < 0) {
+outputElement.innerHTML += "Negative number encountered, stopping.<br>";
+break;
+}
+
+// Check if the number is divisible by 5 and use `continue`
+if (num % 5 === 0) {
+outputElement.innerHTML += "Divisible by 5<br>";
+continue;
+}
+
+// Use `switch` to determine if the number is even or odd
+switch (num % 2) {
+case 0:
+outputElement.innerHTML += "Even<br>";
+break;
+case 1:
+outputElement.innerHTML += "Odd<br>";
+break;
+default:
+outputElement.innerHTML += "Unknown<br>";
+}
+}
+}
+
+// Test the function
+processNumbers([2, 3, 10, 15, -1, 6, 8]);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+body{
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px;
+}
+
+.navbar{
+    background-color: darkgrey;
+    padding: 10px;
+}
+
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+    text-align: left;
+}
+
+header, footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(44, 42, 42);
+}
+
+.logo{
+    background-color: lightgrey;
+    font-size: 20px;
+    color: rgb(91, 86, 86);
+    display: block;
+}
+
+.navbar{
+    display: flex;
+}
